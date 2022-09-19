@@ -1,0 +1,22 @@
+
+{
+    "contact":{"firstname":"Anesu",
+"lastname":"shangwa",
+"email":"ane@gmail.com",
+"favcolor":"red",
+"birthday":"22 september 2022"},
+"contact2":{
+    "firstname":"Hazel",
+    "lastname":"shangwa",
+    "email":"hazel@gmail.com",
+    "favcolor":"blue",
+    "birthday":"22 june 2022"},
+
+
+    "contact3": {"firstname":"peter",
+    "lastname":"mvududu",
+    
+    "email":"peter@gmail.com",
+    "favcolor":"black",
+    "birthday":"22 october 2022"}
+}
