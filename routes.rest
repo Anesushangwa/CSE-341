@@ -1,1 +1,5 @@
-GET http://localhost:8080/contacts
+GET http://localhost:8080/localhost:8080
+
+
+
+GET  https://cse341-anesu.herokuapp.com/contacts
