@@ -30,10 +30,10 @@ const newinfo = async (req, res) => {
     
       firstname: req.body.firstname,
       lastname: req.body.lastname,
-      emai: body.email,
-      favcolor: body.favcolor,
+      emai: req.body.email,
+      favcolor:req.body.favcolor,
     
-      birthday: req.body.birthday
+      birthday:req.body.birthday
   };
   const sendinfo = await mongodb.getDb().db('anesu').collection('contacts').insertOne(newcontact);
 
@@ -56,7 +56,7 @@ const updateContact = async (req, res) => {
 const userId = new ObjectId(req.params.id);
 const newcontact= {
   
-  firstname: req.body.firstname,
+     firstname: req.body.firstname,
       lastname: req.body.lastname,
       email: req.body.email,
       favcolor: req.body.favcolor,
@@ -88,7 +88,7 @@ res.status(500).json(sendinfo.error || 'Some error occurred while updating the c
 
 const deleteinfo = async (req, res) => {
   const userId = new ObjectId(req.params.id);
-  const del = await mongodb.getDb().db('anesu').collection('contacts').remove({ _id: userId }, true);
+  const del = await mongodb.getDb().db('anesu').collection('contacts').deleteOne({ _id: userId }, true);
   console.log(del);
   if (del.deletedCount > 0) {
     res.status(204).send();
